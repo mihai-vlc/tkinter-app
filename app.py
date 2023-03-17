@@ -1,8 +1,8 @@
-from tkinter import Frame
+from tkinter import Frame, Tk
 
 
 class App:
-    def __init__(self, toplevel):
+    def __init__(self, toplevel: Tk):
         self.toplevel = toplevel
         self.container = None
         self.screens = []
