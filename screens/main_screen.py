@@ -2,6 +2,8 @@ from tkinter import CENTER, Button, Canvas, Frame, Label
 from tkinter.font import BOLD
 from PIL import Image, ImageTk
 
+import resources
+
 
 class MainScreen:
     def __init__(self, parent: Frame):
@@ -31,7 +33,7 @@ class MainScreen:
         self.parent.bind("<Configure>", self.handle_resize)
 
     def configure_background(self):
-        self.img_file = Image.open("./resources/background.jpg")
+        self.img_file = Image.open(resources.path("./resources/background.jpg"))
         self.background_canvas = Canvas(self.parent, background="#555")
         self.background_canvas.grid(row=0, column=0, sticky="news")
 
