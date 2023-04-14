@@ -16,3 +16,5 @@ exe = EXE(pyz,
 ```
 
 Reference: https://stackoverflow.com/questions/20602727/pyinstaller-generate-exe-file-folder-in-onefile-mode/20677118#20677118
+
+https://github.com/RobertJN64/TKinterModernThemes
