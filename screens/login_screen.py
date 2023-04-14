@@ -1,4 +1,5 @@
-from tkinter import Button, Label
+from tkinter import Label
+from tkinter.ttk import Button
 
 
 class LoginScreen:
@@ -7,7 +8,7 @@ class LoginScreen:
         self.title = Label(parent, text="Login screen")
         self.title.pack()
 
-        self.back_button = Button(parent, text="Back", command=self.back)
+        self.back_button = Button(parent, style="App.TButton",  text="Back", command=self.back)
         self.back_button.pack()
 
     def back(self):
