@@ -1,9 +1,11 @@
-from tkinter import Frame, Tk
+from tkinter import Frame
+import TKinterModernThemes as TKMT
 
 
-class App:
-    def __init__(self, toplevel: Tk):
-        self.toplevel = toplevel
+class App(TKMT.ThemedTKinterFrame):
+    def __init__(self):
+        super().__init__("My awesome application", "sun-valley", "dark")
+        self.toplevel = self.root
         self.container = None
         self.screens = []
         self.active_screen = None
@@ -11,8 +13,6 @@ class App:
         self.configure_events()
 
     def configure_window(self):
-        self.toplevel.title("My awesome application")
-        self.toplevel.configure(background="#444")
         self.toplevel.minsize(600, 400)
         self.toplevel.geometry("+3000+300")
 
@@ -37,4 +37,4 @@ class App:
         self.active_screen = Screen(self.container)
 
     def start(self):
-        self.toplevel.mainloop()
+        self.run()

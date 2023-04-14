@@ -1,5 +1,5 @@
 from tkinter import Canvas, Frame, Label
-from tkinter import ttk
+from tkinter.ttk import Button
 from tkinter.font import BOLD
 from PIL import Image, ImageTk
 
@@ -26,11 +26,8 @@ class MainScreen:
         )
         self.title.pack()
 
-        self.next_button = ttk.Button(
-            self.content, 
-            text="Next screen",
-            style="App.TButton",
-            command=self.next_screen
+        self.next_button = Button(
+            self.content, text="Next screen", command=self.next_screen
         )
         self.next_button.pack()
 
