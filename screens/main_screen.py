@@ -1,4 +1,4 @@
-from tkinter import CENTER, Button, Canvas, Frame, Label
+from tkinter import Canvas, Frame, Label
 from tkinter import ttk
 from tkinter.font import BOLD
 from PIL import Image, ImageTk
